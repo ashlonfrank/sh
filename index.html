@@ -10,41 +10,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <!-- Left rail -->
-  <a class="logo" href="#" aria-label="Shop home">
-    <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true"><path d="M16 4a12 12 0 1 1-8.5 3.5l3 3A7.8 7.8 0 1 0 16 8.2V4Z" fill="currentColor"/><circle cx="16" cy="16" r="3.4" fill="currentColor"/></svg>
-  </a>
-  <nav class="rail" aria-label="Main">
-    <a href="#" class="rail-btn active" aria-label="Home"><svg viewBox="0 0 24 24"><path d="M12 3 3 10v10a1 1 0 0 0 1 1h5v-6h6v6h5a1 1 0 0 0 1-1V10l-9-7Z"/></svg></a>
-    <a href="#categories" class="rail-btn" aria-label="Categories"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></a>
-    <a href="#" class="rail-btn" aria-label="Cart"><svg viewBox="0 0 24 24"><path d="M2 3h3l2.4 11.2a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.5L21 7H6.2"/><circle cx="9.5" cy="20" r="1.5"/><circle cx="17.5" cy="20" r="1.5"/></svg></a>
-    <a href="#deals" class="rail-btn" aria-label="Deals"><svg viewBox="0 0 24 24"><path d="M3 12V4a1 1 0 0 1 1-1h8l9 9-9 9-9-9Z"/><circle cx="8" cy="8" r="1.6" fill="#fff"/></svg></a>
-    <a href="#" class="rail-btn" aria-label="Orders"><svg viewBox="0 0 24 24"><path d="M4 7h16v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Zm2-4h12l2 4H4l2-4Z"/><rect x="9" y="11" width="6" height="2" rx="1" fill="#fff"/></svg></a>
-  </nav>
-  <nav class="rail rail-bottom" aria-label="Account">
-    <a href="#" class="rail-btn" aria-label="Saved"><svg viewBox="0 0 24 24"><path d="M12 21s-8-5.2-8-11.2A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 2.8C20 15.8 12 21 12 21Z"/></svg></a>
-    <a href="#" class="rail-signin">Sign in</a>
-  </nav>
-
-  <!-- Search -->
-  <header class="top">
-    <form class="search" role="search" onsubmit="return false">
-      <svg viewBox="0 0 24 24" class="search-icon"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
-      <input type="search" placeholder="What are you shopping for today?" aria-label="Search">
-      <button type="button" class="img-search" aria-label="Search by image"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="4"/><circle cx="9" cy="10" r="1.6"/><path d="m3 17 5-4 4 3 4-3 5 4"/></svg></button>
-    </form>
-  </header>
-
+<body data-page="home">
   <main>
-    <ul class="chips" aria-label="Popular categories">
-      <li><a href="#"><img src="https://picsum.photos/seed/chip-beauty/64" alt="">Beauty</a></li>
-      <li><a href="#"><img src="https://picsum.photos/seed/chip-women/64" alt="">Women</a></li>
-      <li><a href="#"><img src="https://picsum.photos/seed/chip-men/64" alt="">Men</a></li>
-      <li><a href="#"><img src="https://picsum.photos/seed/chip-baby/64" alt="">Baby &amp; toddler</a></li>
-      <li><a href="#"><img src="https://picsum.photos/seed/chip-sport/64" alt="">Sporting goods</a></li>
-      <li><a href="#categories" class="chip-more" aria-label="All categories"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="2"/><rect x="13" y="4" width="7" height="7" rx="2"/><rect x="4" y="13" width="7" height="7" rx="2"/><rect x="13" y="13" width="7" height="7" rx="2"/></svg></a></li>
-    </ul>
+    <ul class="chips" aria-label="Popular categories" data-fill="chips"></ul>
 
     <!-- Hero carousel -->
     <section class="hero" aria-roledescription="carousel" aria-label="Featured">
@@ -55,7 +23,7 @@
           <div class="hero-copy">
             <h2>$1,000,000<br>Shop Cash giveaway</h2>
             <p>1000 winners. $1000 each.<br>Just in time for the holidays.</p>
-            <a class="btn" href="#">Enter by Nov 1</a>
+            <a class="btn" href="deals.html">Enter by Nov 1</a>
           </div>
         </article>
         <article class="hero-slide slide-kbeauty">
@@ -63,14 +31,14 @@
           <div class="hero-copy">
             <h2>The Korean<br>Beauty Edit</h2>
             <p>Serums, essences and masks from cult-favorite brands.</p>
-            <a class="btn" href="#">Shop the edit</a>
+            <a class="btn" href="category.html?c=beauty">Shop the edit</a>
           </div>
         </article>
         <article class="hero-slide slide-you">
           <div class="hero-copy">
             <h2>Shop is all<br>about you</h2>
             <p>Recommendations, tracking and rewards in one place.</p>
-            <a class="btn btn-light" href="#">Get started</a>
+            <a class="btn btn-light" href="categories.html">Get started</a>
           </div>
         </article>
       </div>
@@ -78,42 +46,30 @@
     </section>
 
     <section id="deals" class="section">
-      <h2 class="section-title"><a href="#">Deals only on Shop <span class="chev">›</span></a></h2>
-      <div class="row-wrap">
-        <div class="row deals" data-fill="deals"></div>
-        <button class="row-next" aria-label="Next">›</button>
-      </div>
+      <h2 class="section-title"><a href="deals.html">Deals only on Shop <span class="chev">›</span></a></h2>
+      <div data-fill="deals"></div>
     </section>
 
     <section class="section">
       <h2 class="section-title">Trending stores</h2>
-      <div class="row-wrap">
-        <div class="row trending" data-fill="trending"></div>
-        <button class="row-next" aria-label="Next">›</button>
-      </div>
+      <div data-fill="trending"></div>
     </section>
 
     <section id="categories" class="section">
-      <h2 class="section-title"><a href="#">Categories <span class="chev">›</span></a></h2>
+      <h2 class="section-title"><a href="categories.html">Categories <span class="chev">›</span></a></h2>
       <div class="cat-grid" data-fill="categories"></div>
     </section>
 
     <section class="section category-reel">
-      <div class="reel" aria-hidden="true">
+      <div class="reel">
         <div class="reel-words" data-fill="reel"></div>
       </div>
-      <div class="row-wrap">
-        <div class="row products" data-fill="products"></div>
-        <button class="row-next" aria-label="Next">›</button>
-      </div>
+      <div data-fill="products"></div>
     </section>
 
     <section class="section">
-      <h2 class="section-title"><a href="#">Home <span class="chev">›</span></a></h2>
-      <div class="row-wrap">
-        <div class="row home-stores" data-fill="home"></div>
-        <button class="row-next" aria-label="Next">›</button>
-      </div>
+      <h2 class="section-title"><a href="category.html?c=home">Home <span class="chev">›</span></a></h2>
+      <div data-fill="home"></div>
     </section>
 
     <section class="discover">
@@ -122,24 +78,8 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="footer-brand">
-      <div class="qr" aria-hidden="true"></div>
-      <div class="wordmark">shop</div>
-      <p>Shopping designed around you.</p>
-    </div>
-    <div class="footer-cols">
-      <div><h4>Learn more</h4><a href="#">What is Shop?</a><a href="#">Why trust Shop?</a><a href="#">Why use Shop Pay?</a><a href="#">Help center</a></div>
-      <div><h4>Get started</h4><a href="#">For brands</a><a href="#">For creators</a><a href="#">For agents</a><a href="#">Build your store</a></div>
-      <div><h4>Social</h4><a href="#">Instagram</a></div>
-      <div><h4>Legal</h4><a href="#">Terms of Service</a><a href="#">Privacy Policy</a><a href="#">Your Privacy Choices</a></div>
-    </div>
-    <div class="footer-bottom">
-      <div class="stores"><a href="#" class="store-badge"> App Store</a><a href="#" class="store-badge">▶ Google Play</a></div>
-      <div class="legal"><span>Unofficial study remake · not affiliated with Shop or Shopify</span><a href="#">Language</a></div>
-    </div>
-  </footer>
-
+  <script src="data.js"></script>
+  <script src="layout.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
